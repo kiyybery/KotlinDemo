@@ -79,6 +79,11 @@ class ExampleUnitTest {
         }
     }
 
+    fun hasPrefix(x: Any) = when (x) {
+        is String -> print(x.startsWith("prefix"))
+        else -> false
+    }
+
     @Test
     fun addition_isCorrect() {
 //        boxedA()
@@ -87,8 +92,9 @@ class ExampleUnitTest {
 //        toTravel1()
 //        toMax(20, 50)
 //        toMax1(2, 90)
-        whenFun(1)
-        whenFun1(11)
+//        whenFun(1)
+//        whenFun1(11)
+        hasPrefix("prefix")
     }
 
 }
